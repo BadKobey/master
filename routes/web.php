@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\OrganizationController;
+use App\Http\Controllers\TransportController;
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\UserController;
+use App\Models\Organization;
+use App\Models\Transport;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +25,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::resource('users', UserController::class);
+    Route::resource('organizations', OrganizationController::class);
+    Route::resource('transports', TransportController::class);
+});
+
+

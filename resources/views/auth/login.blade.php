@@ -94,7 +94,8 @@
                                 @enderror
 
             <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">{{ __('Вход') }}</button>
+           <button class="btn btn-primary btn-block" type="submit">{{ __('Вход') }}</button>
+
                 <button class="btn btn-primary btn-block"> <a href="{{ route('register') }}" class="forgot"> Регистрация </a></button>
             </div>
             <!-- <div class="py-4">
